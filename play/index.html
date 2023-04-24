@@ -10,7 +10,7 @@
 
 <script>
     function unirse(){
-        fetch("https://dungee-23819-default-rtdb.europe-west1.firebasedatabase.app/pin${pincho}/user.json", {
+        fetch(`https://dungee-23819-default-rtdb.europe-west1.firebasedatabase.app/pin${pincho}/user.json`, {
             method: "POST",
             body: `{"name":"${usercho}"}`
         })
