@@ -13,5 +13,13 @@
 
         pincho.innerText = pin;
     }
+    function obtenerUsuarios(){
+        fetch('https://dungee-v22g.vercel.app/damelosusers')
+        .then(datos=>datos.json())
+        .then(mama=>{
+            console.log(mama);
+        })
+    }
+    obtenerUsuarios();
 </script>
 
