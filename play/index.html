@@ -2,17 +2,17 @@
 
 <h1>Unirse a un partida</h1>
 
-<input id="pincho" placeholder="introduzca el PIN">
-<input id="usercho" placeholder="introduzca su nombre">
+<input id="pinel" placeholder="introduzca el PIN">
+<input id="userel" placeholder="introduzca su nombre">
 
 <button onclick="unirse()">UNIRSE</button>
 
 
 <script>
     function unirse(){
-        fetch(`https://dungee-23819-default-rtdb.europe-west1.firebasedatabase.app/pin${pincho}/user.json`, {
+        fetch(`https://dungee-23819-default-rtdb.europe-west1.firebasedatabase.app/pin${pinel.value}/user.json`, {
             method: "POST",
-            body: `{"name":"${usercho}"}`
+            body: `{"name":"${userel.value}"}`
         })
     }
 </script>
