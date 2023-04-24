@@ -1,3 +1,17 @@
 <!DOCTYPE html>
 
 <h1>Crear una partida nueva</h1>
+
+<button onclick="generarPIN()">CREAR PARTIDA</button>
+
+<p id="pincho">PIN</p>
+
+
+<script>
+    function generarPIN(){
+        const pin = Math.floor(Math.random()*10000);
+
+        pincho.innerText = pin;
+    }
+</script>
+
