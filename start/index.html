@@ -13,15 +13,16 @@
 
 
 <script>
+    let pin;
     function generarPIN(){
-        const pin = Math.floor(Math.random()*10000);
+        pin = Math.floor(Math.random()*10000);
 
         pinEl.innerText = pin;
     }
 
 
     function obtenerUsuarios(){
-        fetch('https://dungee-v22g.vercel.app/api/damelosusers')
+        fetch('https://dungee-v22g.vercel.app/api/damelosusers?pin=${pin}')
         .then(datos=>datos.json())
         .then(mama=>{
             console.log(mama);
