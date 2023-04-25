@@ -10,7 +10,11 @@
 <button onclick="generarPIN()">CREAR PARTIDA</button>
 
 <p id="pinEl">PIN</p>
-<button>TODO LISTO</button>
+<p id="listaEl"></p>
+
+<button onclick="mostrarPreguntas()">TODO LISTO</button>
+
+
 
 <script>
     let pin;
@@ -26,10 +30,28 @@
         fetch(`https://dungee-v22g.vercel.app/api/damelosusers?pin=${pin}`)
         .then(datos=>datos.json())
         .then(mama=>{
-            console.log(mama);
+            let lista = "";
+
+            for (const x in mama.users) {
+
+                lista = lista + mama.users[x].name +" ";
+            }
+
+            listaEl.innerText=lista;
         })
     }
 
-    
+    function mostrarPreguntas()
+    {
+        fetch(`https://dungee-v22.vercel.app/api/damelaquestions.js`)
+        then (datos=>datos.json())
+        then (preguntas => console.log(preguntas)
+
+
+      
+        )
+
+           
+    }    
 </script>
 
