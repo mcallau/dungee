@@ -9,22 +9,25 @@
 
 <button onclick="generarPIN()">CREAR PARTIDA</button>
 
-<p id="pincho">PIN</p>
+<p id="pinEl">PIN</p>
 
 
 <script>
     function generarPIN(){
         const pin = Math.floor(Math.random()*10000);
 
-        pincho.innerText = pin;
+        pinEl.innerText = pin;
     }
+
+
     function obtenerUsuarios(){
-        fetch('https://dungee-v22g.vercel.app/damelosusers')
+        fetch('https://dungee-v22g.vercel.app/api/damelosusers')
         .then(datos=>datos.json())
         .then(mama=>{
             console.log(mama);
         })
     }
+
     obtenerUsuarios();
 </script>
 
