@@ -1,0 +1,26 @@
+<p id="listaEl"></p>
+
+<script>
+    const json = { 
+        "users": {
+            "-NkJoPY": {
+                "name":"gerard"
+            },
+            "-NkJP": {
+                "name":"JOTAPE"
+            },
+            "-NkJole": {
+                "name":"JOSEP"
+            }
+        }
+    };
+
+    let lista = "";
+
+    for (const x in json.users) {
+
+      lista = lista + json.users[x].name;
+    }
+
+    listaEl.innerText=lista;
+</script>
