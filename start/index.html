@@ -29,7 +29,7 @@
     function obtenerUsuarios(){
         fetch(`https://dungee-v22g.vercel.app/api/damelosusers?pin=${pin}`)
         .then(datos=>datos.json())
-        .then(mama=>{
+        .then(mama => {
             let lista = "";
 
             for (const x in mama.users) {
@@ -44,12 +44,8 @@
     function mostrarPreguntas()
     {
         fetch(`https://dungee-v22.vercel.app/api/damelaquestions.js`)
-        then (datos=>datos.json())
-        then (questions => console.log(questions)
-
-
-      
-        )
+        .then (datos=>datos.json())
+        .then (questions => console.log(questions));
 
            
     }    
