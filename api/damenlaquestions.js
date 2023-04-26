@@ -1,14 +1,34 @@
-export default function handler(request,response){
-    const questions=[
-        ["CUANTO ES DOS MAS DOS?",1,2,3,4,   4],   // el ultimo numero indica la posicion de la respuesta correcta
-        ["cuanto es raiz cuadrada 9?",3, 4,5,2,   1],
-        ["cuanto es 3-2?",4,2,3,1,   4]
-    ];
+export default function handler(request, response) {
 
-
-
-
-
-
+    const questions = {
+        "preguntas": {
+            "pregunta0" : {
+                "pregunta": "2+2?",
+                "respuesta0": "4",
+                "respuesta1": "5",
+                "respuesta2": "2",
+                "respuesta3": "1",
+                "correcta": 0
+            },
+            "pregunta1" : {
+                "pregunta": "2+7?",
+                "respuesta0": "4",
+                "respuesta1": "5",
+                "respuesta2": "9",
+                "respuesta3": "1",
+                "correcta": 2
+            },
+            "pregunta2" : {
+                "pregunta": "2+1?",
+                "respuesta0": "4",
+                "respuesta1": "3",
+                "respuesta2": "2",
+                "respuesta3": "1",
+                "correcta": 1
+            },
+        }
+    }
+        
+    
     response.json(questions);
 }
