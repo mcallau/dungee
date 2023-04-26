@@ -13,7 +13,7 @@
 <p id="listaEl"></p>
 
 <button onClick="mostrarPreguntas()">TODO LISTO</button>
-
+<p id="preguntasEl"></p>
 
 
 <script>
@@ -45,7 +45,12 @@
     {
         fetch(`https://dungee-v22g.vercel.app/api/damelasquestions`)
         .then (datos=>datos.json())
-        .then (questions => console.log(questions));
+        .then (questions => {
+            for (const pregunta in questions.preguntas){
+               preguntasEl.innerText += questions.preguntas[pregunta].pregunta;
+        
+            }
+        });
 
            
     }    
